@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Tavola &mdash; dinner party planner for iPhone</title>
+<title>Dinner Party Planner for iPhone &mdash; La Tavola</title>
+<!--
+  APP STORE — shared values (plain HTML, no templating, so these are written by hand)
+    Apple ID:      6774995992
+    App Store URL: https://apps.apple.com/app/id6774995992
+  Used in two places on this page: the apple-itunes-app meta tag just below,
+  and the href of the LIVE App Store block in <body>. If the ID ever changes,
+  change it here and in both of those.
+-->
+<meta name="apple-itunes-app" content="app-id=6774995992">
 <meta name="description" content="La Tavola is a personal dinner party assistant for iPhone: recipes, guest lists, menus, wine pairing and shopping lists in one place.">
 <link rel="canonical" href="https://sailormansoftware.com/">
 <meta property="og:type" content="website">
@@ -208,6 +217,8 @@
 
   /* --- draft additions --- */
   .badge{display:inline-block;margin:.4rem 0 0;padding:.75rem 1.3rem;border:1px solid var(--gold);border-radius:999px;color:var(--gold);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+  .store-badge{display:inline-block;margin:.4rem 0 0;line-height:0}
+  .store-badge img{height:48px;width:auto}
   .note{font-size:.85rem;color:var(--muted);margin-top:.9rem}
   .note a.helplink{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(207,159,92,.4);padding-bottom:1px}
   .note a.helplink:hover{border-color:var(--gold)}
@@ -246,7 +257,15 @@
       <p class="lede">La Tavola is a personal dinner party assistant. Keep your recipes, plan the menu, remember who is coming and what they can&rsquo;t eat, and pair the wine &mdash; all in one place.</p>
       <p class="lede">Made for intimate home entertaining. Not for catering, and not for event companies.</p>
       <div class="divider"></div>
+      <!-- ===== APP STORE: COMING SOON — DELETE THIS BLOCK ON LAUNCH DAY ===== -->
+      <!-- Replace with the LIVE block directly below: delete these lines, then uncomment the LIVE block. Nothing else. -->
       <span class="badge">Coming soon to the App Store</span>
+      <!-- ===== END COMING SOON ===== -->
+
+      <!-- ===== APP STORE: LIVE — UNCOMMENT ON LAUNCH DAY =====
+      <a class="store-badge" href="https://apps.apple.com/app/id6774995992"><img src="/images/download-on-the-app-store.svg" width="120" height="40" alt="Download La Tavola on the App Store"></a>
+      ===== END LIVE ===== -->
+
       <p class="note">Free to download. iPhone only.</p>
       <p class="note"><a class="helplink" href="/support.html">Need help? Visit Support &rarr;</a></p>
     </div>
