@@ -1,0 +1,34 @@
+# La Tavola
+
+> La Tavola is a personal dinner party assistant for iPhone and iPad, made by SailormanSoftware LLC of Sarasota, Florida. It keeps a host's recipes, guests and every dinner party they have given in one place, so when they plan the next one they can see what each guest was served before.
+
+La Tavola is for people who cook for friends and family at home. It is not for caterers or event companies.
+
+## Facts
+
+- App Store: https://apps.apple.com/app/id6774995992
+- Devices: iPhone and iPad, iOS or iPadOS 15 or later. No Android, no web version.
+- Price: free to download, with a free trial. Then a $29.99 a year subscription (US), one subscription for iPhone and iPad. No monthly plan.
+- Maker: SailormanSoftware LLC, founded by Eric Neikrug, Sarasota, Florida. Contact: eric@sailormansoftware.com
+- Privacy: recipes, guests and dinner parties are stored on the user's own devices and, when syncing, in their own iCloud account, not on the maker's servers. Guest names, contact details and dietary preferences are never sent to the maker or to the AI.
+
+## What it does
+
+- Recipe collection: import a recipe by photographing a cookbook page (including recipes over several pages), from a website, or from pasted text, or type it in. Share recipes with friends as a file.
+- Dinner party planning: set the date, choose courses, build the menu.
+- Guests: dietary restrictions, food preferences, RSVPs, and a history of what each guest was served.
+- Recipe scaling to the number of guests who have accepted.
+- One shopping list for the whole meal, or for several meals across a date range.
+- Wine pairing suggestions for the planned menu, with notes on what guests enjoyed.
+- Calendar entries with reminders.
+- iPhone and iPad sync through the user's iCloud account.
+- Cook view: a recipe full screen in large type, with steps to tick off and the screen kept awake.
+
+## Pages
+
+- [Home](https://sailormansoftware.com/): what La Tavola does, prices, and common questions
+- [The story](https://sailormansoftware.com/the-story.html): how an 86-year-old retired programmer built La Tavola with AI
+- [Dinner party checklist](https://sailormansoftware.com/dinner-party-checklist.html): a planning timeline for a dinner party at home
+- [Support](https://sailormansoftware.com/support.html): help, accounts and subscriptions
+- [Privacy Policy](https://sailormansoftware.com/privacy.html)
+- [Terms of Use](https://sailormansoftware.com/terms.html)

@@ -25,6 +25,78 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="La Tavola on iPhone: the home screen and the Add a Recipe screen">
 <meta name="twitter:card" content="summary_large_image">
+<!-- Structured data for search engines and AI assistants. Keep the price,
+     OS versions and the Questions answers in step with the visible page. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://sailormansoftware.com/#org",
+      "name": "SailormanSoftware LLC",
+      "url": "https://sailormansoftware.com/",
+      "email": "eric@sailormansoftware.com",
+      "founder": {"@type": "Person", "name": "Eric Neikrug"},
+      "address": {"@type": "PostalAddress", "addressLocality": "Sarasota", "addressRegion": "FL", "addressCountry": "US"}
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://sailormansoftware.com/#app",
+      "name": "La Tavola",
+      "alternateName": "La Tavola dinner party planner",
+      "description": "A personal dinner party assistant for iPhone and iPad. Keep your recipes, plan the menu, track guests and their dietary restrictions, see what each guest was served before, scale recipes to the guest count, build one shopping list, get wine pairing suggestions, and add the party to your calendar.",
+      "url": "https://sailormansoftware.com/",
+      "downloadUrl": "https://apps.apple.com/app/id6774995992",
+      "installUrl": "https://apps.apple.com/app/id6774995992",
+      "applicationCategory": "LifestyleApplication",
+      "applicationSubCategory": "Food & Drink",
+      "operatingSystem": "iOS 15.0 or later, iPadOS 15.0 or later",
+      "featureList": [
+        "Recipe collection with import from a photo of a cookbook page, a website, or pasted text",
+        "Dinner party planning with courses and menu",
+        "Guest list with dietary restrictions, food preferences and RSVPs",
+        "History of what each guest was served",
+        "Recipe scaling to the number of guests",
+        "One shopping list for the whole meal",
+        "Wine pairing suggestions",
+        "Calendar reminders",
+        "iPhone and iPad sync through iCloud",
+        "Full-screen cook view"
+      ],
+      "image": "https://sailormansoftware.com/images/share-card.jpg",
+      "offers": [
+        {"@type": "Offer", "name": "Download", "price": "0", "priceCurrency": "USD"},
+        {"@type": "Offer", "name": "Annual subscription", "price": "29.99", "priceCurrency": "USD",
+         "priceSpecification": {"@type": "UnitPriceSpecification", "price": "29.99", "priceCurrency": "USD", "billingDuration": "P1Y"}}
+      ],
+      "publisher": {"@id": "https://sailormansoftware.com/#org"},
+      "author": {"@id": "https://sailormansoftware.com/#org"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Is there an app that remembers what I served each guest?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. That is why La Tavola was made. Every dinner party you give is kept with its guests and its menu, so when you invite the same friends again you can see what they were served last time."}},
+        {"@type": "Question", "name": "How do I keep track of my guests' dietary restrictions?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Each guest in La Tavola has their own dietary restrictions and food preferences. When you plan a dinner party, you see them for everyone you have invited, so you can choose a menu that works for the whole table."}},
+        {"@type": "Question", "name": "Can it turn a cookbook page into a recipe?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. Photograph the page, even a recipe that runs over several pages, and La Tavola reads it into a recipe you can edit. It can also import a recipe from a website or from pasted text."}},
+        {"@type": "Question", "name": "Does it scale recipes for the number of guests?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. Recipes scale to the number of guests who have accepted, and the shopping list uses the scaled quantities."}},
+        {"@type": "Question", "name": "How much does La Tavola cost?",
+         "acceptedAnswer": {"@type": "Answer", "text": "It is free to download, and it starts with a free trial. After that, a subscription is $29.99 a year in the US. One subscription covers your iPhone and your iPad. There is no monthly plan."}},
+        {"@type": "Question", "name": "Which devices does it run on?",
+         "acceptedAnswer": {"@type": "Answer", "text": "iPhone and iPad, with iOS or iPadOS 15 or later. There is no Android version."}},
+        {"@type": "Question", "name": "Where are my recipes and guest lists kept?",
+         "acceptedAnswer": {"@type": "Answer", "text": "On your own devices, and in your own iCloud account if you sync an iPhone and an iPad. They are not stored on our servers. Guest names, contact details and dietary preferences are never sent to us or to the AI."}},
+        {"@type": "Question", "name": "Is it for caterers or event planners?",
+         "acceptedAnswer": {"@type": "Answer", "text": "No. La Tavola is made for people who cook for friends and family at home."}}
+      ]
+    }
+  ]
+}
+</script>
 <link rel="stylesheet" href="/fonts.css">
 <style>
   :root{
@@ -233,6 +305,13 @@
   .about p{max-width:60ch;line-height:1.65;color:var(--muted);font-weight:300;margin-bottom:.8rem}
   .about strong{color:var(--cream);font-weight:500}
   .site-footer{max-width:1100px;margin:0 auto;padding:3vw 5.5vw 5vw}
+  .about a.morelink{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(207,159,92,.4);padding-bottom:1px}
+  .about a.morelink:hover{border-color:var(--gold)}
+  .faq{max-width:1100px;margin:0 auto;padding:4vw 5.5vw 2vw}
+  .faq h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.6rem,2.6vw,2.2rem);margin-bottom:1.6rem}
+  .qa{max-width:62ch;padding:1.1rem 0;border-top:1px solid var(--hairline)}
+  .qa h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.1rem;line-height:1.35;margin-bottom:.45rem;color:var(--cream)}
+  .qa p{font-size:.95rem;line-height:1.6;color:var(--muted);font-weight:300}
 
   /* --- screenshot gallery --- */
   .gallery{max-width:1100px;margin:0 auto;padding:6vw 5.5vw 1vw}
@@ -261,7 +340,7 @@
       <a class="store-badge" href="https://apps.apple.com/app/id6774995992"><img src="/images/download-on-the-app-store.svg" width="120" height="40" alt="Download La Tavola on the App Store"></a>
       <!-- ===== END LIVE ===== -->
 
-      <p class="note">Free to download. For iPhone and iPad.</p>
+      <p class="note">Free to download, with a free trial. Then $29.99 a year, one subscription for your iPhone and iPad. Needs iOS or iPadOS 15 or later.</p>
       <p class="note"><a class="helplink" href="/support.html">Need help? Visit Support &rarr;</a></p>
     </div>
   </section>
@@ -289,6 +368,44 @@
     <div class="feat"><h3>Wine pairing</h3><p>Get pairing suggestions for the menu you&rsquo;ve planned, and keep notes on what everyone actually enjoyed.</p></div>
     <div class="feat"><h3>One shopping list</h3><p>Every ingredient for the evening, scaled to the number of guests who have accepted. Or choose a date range and combine the meals in it into one list, so you make a single trip to the store.</p></div>
     <div class="feat"><h3>On your calendar</h3><p>Dinner parties can be added to your iPhone calendar, with reminders so nothing gets left to the last day.</p></div>
+    <div class="feat"><h3>iPhone and iPad together</h3><p>Your recipes, guests and dinner parties stay the same on both devices, through your own iCloud account. Plan on the iPad, shop with the iPhone.</p></div>
+    <div class="feat"><h3>Cook from the screen</h3><p>Cook view shows a recipe full screen in large type. Tick off each step as you go, and the screen stays awake while you cook.</p></div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Questions</h2>
+  <div class="qa">
+    <h3>Is there an app that remembers what I served each guest?</h3>
+    <p>Yes. That is why La Tavola was made. Every dinner party you give is kept with its guests and its menu, so when you invite the same friends again you can see what they were served last time.</p>
+  </div>
+  <div class="qa">
+    <h3>How do I keep track of my guests&rsquo; dietary restrictions?</h3>
+    <p>Each guest in La Tavola has their own dietary restrictions and food preferences. When you plan a dinner party, you see them for everyone you have invited, so you can choose a menu that works for the whole table.</p>
+  </div>
+  <div class="qa">
+    <h3>Can it turn a cookbook page into a recipe?</h3>
+    <p>Yes. Photograph the page, even a recipe that runs over several pages, and La Tavola reads it into a recipe you can edit. It can also import a recipe from a website or from pasted text.</p>
+  </div>
+  <div class="qa">
+    <h3>Does it scale recipes for the number of guests?</h3>
+    <p>Yes. Recipes scale to the number of guests who have accepted, and the shopping list uses the scaled quantities.</p>
+  </div>
+  <div class="qa">
+    <h3>How much does La Tavola cost?</h3>
+    <p>It is free to download, and it starts with a free trial. After that, a subscription is $29.99 a year in the US. One subscription covers your iPhone and your iPad. There is no monthly plan.</p>
+  </div>
+  <div class="qa">
+    <h3>Which devices does it run on?</h3>
+    <p>iPhone and iPad, with iOS or iPadOS 15 or later. There is no Android version.</p>
+  </div>
+  <div class="qa">
+    <h3>Where are my recipes and guest lists kept?</h3>
+    <p>On your own devices, and in your own iCloud account if you sync an iPhone and an iPad. They are not stored on our servers. Guest names, contact details and dietary preferences are never sent to us or to the AI.</p>
+  </div>
+  <div class="qa">
+    <h3>Is it for caterers or event planners?</h3>
+    <p>No. La Tavola is made for people who cook for friends and family at home.</p>
   </div>
 </section>
 
@@ -296,11 +413,12 @@
   <div class="divider" style="margin-top:0"></div>
   <h2>About the maker</h2>
   <p><strong>SailormanSoftware LLC</strong> is a Florida-based software company founded by Eric Neikrug in Sarasota. We build tools that make it easier to plan, host, and enjoy time spent together. La Tavola is our first product.</p>
+  <p><a class="morelink" href="/the-story.html">How an 86-year-old programmer built La Tavola &rarr;</a></p>
 </section>
 
 <div class="site-footer"><footer>
   <span>&copy; 2026 SailormanSoftware LLC</span>
-  <span class="legal"><a href="/dinner-party-checklist.html">Dinner party checklist</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a></span>
+  <span class="legal"><a href="/dinner-party-checklist.html">Dinner party checklist</a><a href="/the-story.html">The story</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a></span>
   <a href="mailto:eric@sailormansoftware.com">eric@sailormansoftware.com</a>
 </footer></div>
 </body>
