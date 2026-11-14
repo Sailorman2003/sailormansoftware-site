@@ -34,6 +34,43 @@ h1 em{font-style:normal;font-weight:600}
 .phone{transform:none;box-shadow:0 18px 44px #55433724}
 .eyebrow{letter-spacing:.12em;color:#946e53}
 .button{border-radius:4px}
+
+/* La Tavola Mediterranean palette — November 2026 refresh */
+:root{--cream:#fff9f0;--paper:#fffdf8;--olive:#626b45;--sage:#eee8d5;--ink:#30251f;--muted:#62564d;--terracotta:#c46a45;--burgundy:#722f37;--champagne:#f2d7a0}
+body{background:var(--cream);color:var(--ink)}
+nav{background:var(--cream)}
+.logo{color:var(--burgundy)}
+.logo span{color:var(--terracotta)}
+.links a:not(.button):hover,footer a:hover{color:var(--burgundy)}
+.button{background:var(--terracotta);color:#fff;border-radius:7px;transition:background .2s ease,transform .2s ease}
+.button:hover{background:#a94f2f;transform:translateY(-2px)}
+.button:focus-visible,a:focus-visible{outline:3px solid var(--champagne);outline-offset:3px}
+.button.secondary{border:2px solid var(--champagne);color:#fff;background:transparent}
+.button.secondary:hover{background:#ffffff18}
+.hero{background:radial-gradient(ellipse at 80% 30%,#944750 0%,transparent 53%),linear-gradient(125deg,#62232e 0%,var(--burgundy) 65%,#853b3e 100%);color:#fffaf2}
+.hero .eyebrow{color:var(--champagne)}
+.hero h1 em{color:var(--champagne)}
+.hero .lead{color:#fff0e5}
+.hero .micro{color:#f2ddd1}
+.hero .phone{background:#231c1b;box-shadow:0 26px 70px #2b101a80;border:2px solid #e8b993}
+.strip{background:var(--olive);color:#fff9f0}
+.eyebrow{color:#a34e31}
+.center h2,.story h2{color:var(--burgundy)}
+.feature{background:var(--paper);border:1px solid #ead6c5;box-shadow:0 10px 28px #722f3710;border-radius:12px}
+.feature-img{background:#f5e9d7}
+.feature h3{color:var(--burgundy)}
+#guest-messaging{background:#f5e8d7;border-radius:18px;margin-top:1rem;margin-bottom:1rem}
+.story{background:linear-gradient(120deg,#e9e8cf,#f5eddc)}
+.quote{color:var(--burgundy);border-left:4px solid var(--terracotta)}
+.step-number{color:var(--terracotta)}
+.steps h3{color:var(--burgundy)}
+.cta{background:linear-gradient(130deg,#652631,var(--burgundy) 65%,#874249);color:#fffaf2}
+.cta p{color:#f9e7dc}
+.cta .button{background:var(--terracotta);color:white}
+.cta .button:hover{background:#a94f2f}
+footer{color:#62564d}
+@media(max-width:800px){#guest-messaging{border-radius:0;margin-top:0;margin-bottom:0}}
+@media(prefers-reduced-motion:reduce){.button{transition:none}.button:hover{transform:none}}
 </style></head><body>
 <nav><a class="logo" href="/">La Tavola<span>.</span></a><div class="links"><a href="#features">Features</a><a href="/the-story.html">Our Story</a><a href="#how">How It Works</a><a class="button" href="https://apps.apple.com/us/app/la-tavola-dinner-party-host/id6774995992">Get the iPhone App</a></div></nav>
 <main><section class="hero"><div class="hero-inner"><div><div class="eyebrow">DINNER PARTY PLANNING FOR IPHONE</div><h1>Entertain with confidence.<br><em>Remember every detail.</em></h1><p class="lead">Remember who came, what you served, and what your guests love. La Tavola brings your dinner parties, favorite recipes, and meal planning together in one beautiful place.</p><div class="actions"><a class="button" href="https://apps.apple.com/us/app/la-tavola-dinner-party-host/id6774995992">Download on the App Store</a><a class="button secondary" href="#features">Explore the features</a></div><p class="micro">Free to try · iPhone app · $29.99/year after trial</p></div><div class="phone"><img src="/images/screen-home.webp" alt="La Tavola iPhone app home screen"></div></div></section>
