@@ -56,7 +56,9 @@
         "Recipe collection with import from a photo of a cookbook page, a website, or pasted text",
         "Dinner party planning with courses and menu",
         "Guest list with dietary restrictions, food preferences and RSVPs",
-        "History of what each guest was served",
+        "Group conversations with guests in Apple Messages, chosen by RSVP status",
+        "History of what each guest was served, and of the dinner parties each recipe was served at",
+        "Editable recipes: ingredients, quantities, steps, notes, times and source",
         "Recipe scaling to the number of guests",
         "One shopping list for the whole meal",
         "Wine pairing suggestions",
@@ -80,6 +82,8 @@
          "acceptedAnswer": {"@type": "Answer", "text": "Yes. That is why La Tavola was made. Every dinner party you give is kept with its guests and its menu, so when you invite the same friends again you can see what they were served last time."}},
         {"@type": "Question", "name": "How do I keep track of my guests' dietary restrictions?",
          "acceptedAnswer": {"@type": "Answer", "text": "Each guest in La Tavola has their own dietary restrictions and food preferences. When you plan a dinner party, you see them for everyone you have invited, so you can choose a menu that works for the whole table."}},
+        {"@type": "Question", "name": "Can I message all my guests at once?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. From a dinner party, La Tavola starts a group conversation in Apple Messages with everyone invited, or only the guests who are attending, said maybe, declined or haven't replied. You write the message, and guests reply in Messages without needing the app."}},
         {"@type": "Question", "name": "Can it turn a cookbook page into a recipe?",
          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Photograph the page, even a recipe that runs over several pages, and La Tavola reads it into a recipe you can edit. It can also import a recipe from a website or from pasted text."}},
         {"@type": "Question", "name": "Does it scale recipes for the number of guests?",
@@ -321,7 +325,36 @@
   .shot{margin:0;text-align:center}
   .shot .phone{width:100%;max-width:250px;margin:0 auto}
   .shot figcaption{margin:1.2rem auto 0;max-width:26ch;font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:.95rem;line-height:1.45;color:var(--muted)}
+  /* --- hosting guides (hero) --- */
+  .guides{display:flex;flex-direction:column;gap:.55rem;margin-top:2rem;padding-top:1.3rem;border-top:1px solid var(--hairline);font-size:.92rem}
+  .guides .label{color:var(--gold);letter-spacing:.08em;text-transform:uppercase;font-size:.7rem}
+  .guides a{color:var(--cream);text-decoration:none;align-self:flex-start;border-bottom:1px solid rgba(166,70,31,.8);padding-bottom:1px;line-height:1.4}
+  .guides a:hover{color:var(--gold);border-color:var(--gold)}
+  .guides a::after{content:" \2192";color:var(--gold)}
+
+  /* --- plan / remember / recipes --- */
+  .pillars{max-width:1100px;margin:0 auto;padding:6vw 5.5vw 1vw}
+  .pillars h2,.messages h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.2;margin-bottom:2.4rem}
+  .pillars h2 em,.messages h2 em{font-style:italic;color:var(--gold)}
+  .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
+  .pillar{background:var(--panel);border:1px solid var(--hairline);border-radius:14px;padding:2rem 1.8rem}
+  .pillar .num{font-family:'Fraunces',serif;font-style:italic;color:var(--rust);font-size:1rem;margin-bottom:.8rem}
+  .pillar h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.3rem;line-height:1.3;margin-bottom:.8rem}
+  .pillar p{font-size:.98rem;line-height:1.6;color:var(--muted);font-weight:300;margin-bottom:1.1rem}
+  .pillar ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+  .pillar li{font-size:.92rem;line-height:1.45;color:var(--cream);font-weight:300;padding-left:1.1rem;position:relative}
+  .pillar li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:1px;background:var(--gold)}
+
+  /* --- group conversations --- */
+  .messages{max-width:1100px;margin:0 auto;padding:5vw 5.5vw 1vw}
+  .messages-inner{border-left:1px solid var(--rust);padding:.4rem 0 .4rem 2rem}
+  .messages h2{margin-bottom:1.2rem}
+  .messages p{max-width:62ch;font-size:1rem;line-height:1.65;color:var(--muted);font-weight:300;margin-bottom:.9rem}
+
   @media (max-width: 860px){
+    .pillar-grid{grid-template-columns:1fr;gap:1.4rem}
+    .pillar{padding:1.6rem 1.4rem}
+    .messages-inner{padding-left:1.2rem}
     .shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1.6rem;padding-bottom:1rem;margin:0 -5.5vw;padding-left:5.5vw;padding-right:5.5vw}
     .shot{flex:0 0 68%;scroll-snap-align:center}
   }
@@ -342,6 +375,13 @@
 
       <p class="note">Free to download, with a free trial. Then $29.99 a year, one subscription for your iPhone and iPad. Needs iOS or iPadOS 15 or later.</p>
       <p class="note"><a class="helplink" href="/support.html">Need help? Visit Support &rarr;</a></p>
+
+      <nav class="guides" aria-label="Hosting guides">
+        <span class="label">Hosting guides</span>
+        <a href="/dinner-party-checklist.html">Dinner party planning checklist</a>
+        <a href="/remember-what-you-served.html">How to remember what you served your guests</a>
+        <a href="/organize-recipes-shopping-lists.html">Organizing recipes and shopping lists</a>
+      </nav>
     </div>
   </section>
   <section class="showcase">
@@ -349,6 +389,53 @@
     <div class="caption">La Tavola &mdash; welcome</div>
   </section>
 </div>
+
+<section class="pillars" aria-labelledby="pillars-title">
+  <h2 id="pillars-title">Plan it. Remember it. <em>Make the recipes your own.</em></h2>
+  <div class="pillar-grid">
+    <div class="pillar">
+      <div class="num">01</div>
+      <h3>Plan the whole evening in one place</h3>
+      <p>Set the date, choose the courses and build the menu from your own recipes. Everyone&rsquo;s dietary restrictions are in front of you while you choose.</p>
+      <ul>
+        <li>Recipes scale to the number of guests who accept</li>
+        <li>One shopping list for every course</li>
+        <li>Wine pairing for the menu you planned</li>
+        <li>On your calendar, with reminders</li>
+      </ul>
+    </div>
+    <div class="pillar">
+      <div class="num">02</div>
+      <h3>Remember every table you&rsquo;ve set</h3>
+      <p>Every dinner party is kept with its guests and its menu. Before you invite the same friends again, you can see what they were served last time, so nobody gets the same roast twice.</p>
+      <ul>
+        <li>Each guest&rsquo;s history of what they were served</li>
+        <li>Each recipe shows the dinner parties it was served at</li>
+        <li>Notes on what everyone enjoyed</li>
+      </ul>
+    </div>
+    <div class="pillar">
+      <div class="num">03</div>
+      <h3>Recipes that are yours to change</h3>
+      <p>Once a recipe is in La Tavola, it&rsquo;s yours. Photograph a cookbook page or import from a website, then make it read the way you cook it.</p>
+      <ul>
+        <li>Edit ingredients, quantities and every step</li>
+        <li>Add your own notes, prep and cook times</li>
+        <li>Keep the source: cookbook, page, website or family</li>
+        <li>Cook from the screen in large type, or share it with a friend</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="messages" aria-labelledby="messages-title">
+  <div class="messages-inner">
+    <div class="eyebrow">Group conversations in Apple Messages</div>
+    <h2 id="messages-title">Keep the whole table <em>in the conversation.</em></h2>
+    <p>From any dinner party, tap Message and La Tavola starts a new group conversation in Apple Messages with the guests you choose: everyone you invited, or only those attending, those who said maybe, those who declined, or those who haven&rsquo;t replied yet.</p>
+    <p>Talk over the menu, sort out who is bringing what, and change plans together. You write the message yourself; La Tavola only addresses it. Your guests reply in Messages as they always do, and they don&rsquo;t need La Tavola.</p>
+  </div>
+</section>
 
 <section class="gallery">
   <h2>A look <em>inside.</em></h2>
@@ -382,6 +469,10 @@
   <div class="qa">
     <h3>How do I keep track of my guests&rsquo; dietary restrictions?</h3>
     <p>Each guest in La Tavola has their own dietary restrictions and food preferences. When you plan a dinner party, you see them for everyone you have invited, so you can choose a menu that works for the whole table.</p>
+  </div>
+  <div class="qa">
+    <h3>Can I message all my guests at once?</h3>
+    <p>Yes. From a dinner party, La Tavola starts a group conversation in Apple Messages with everyone invited, or only the guests who are attending, said maybe, declined or haven&rsquo;t replied. You write the message, and guests reply in Messages without needing the app.</p>
   </div>
   <div class="qa">
     <h3>Can it turn a cookbook page into a recipe?</h3>
@@ -418,7 +509,7 @@
 
 <div class="site-footer"><footer>
   <span>&copy; 2026 SailormanSoftware LLC</span>
-  <span class="legal"><a href="/dinner-party-checklist.html">Dinner party checklist</a><a href="/the-story.html">The story</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a></span>
+  <span class="legal"><a href="/dinner-party-checklist.html">Dinner party checklist</a><a href="/remember-what-you-served.html">Remember what you served</a><a href="/organize-recipes-shopping-lists.html">Recipes and shopping lists</a><a href="/the-story.html">The story</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a></span>
   <a href="mailto:eric@sailormansoftware.com">eric@sailormansoftware.com</a>
 </footer></div>
 </body>
