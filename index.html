@@ -367,6 +367,15 @@
   .entry-photo,.entry-photo img,.entry-shade{position:absolute;inset:0;width:100%;height:100%}
   /* Wide screens show a band of the portrait photo: 30% down keeps both candle flames in view. */
   .entry-photo img{object-fit:cover;object-position:50% 30%;display:block}
+  /* Wide screens: the photo is drawn a little narrower than the window, so less is cropped
+     from top and bottom; its sides fade into a blurred, darkened copy of itself. */
+  .entry-backdrop,.entry-backdrop img{position:absolute;inset:0;width:100%;height:100%}
+  .entry-backdrop img{object-fit:cover;object-position:50% 30%;filter:blur(28px) brightness(.45);transform:scale(1.12)}
+  @media (min-aspect-ratio:1/1){
+    .entry-photo img{left:50%;width:84%;transform:translateX(-50%);
+      -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%);
+              mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%)}
+  }
   /* Same gradient as the app's Welcome screen: light at the top, dark at the foot. */
   .entry-shade{background:linear-gradient(180deg,rgba(0,0,0,.06) 0%,rgba(0,0,0,.30) 35%,rgba(0,0,0,.78) 100%)}
   .entry-content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;align-items:center;padding:2rem 2rem calc(2rem + env(safe-area-inset-bottom))}
@@ -393,6 +402,7 @@
 </head>
 <body>
 <section class="entry-hero" aria-label="Welcome to La Tavola">
+  <div class="entry-backdrop" aria-hidden="true"><img src="/images/welcome-table-1200.jpg" alt=""></div>
   <div class="entry-photo"><img src="/images/welcome-table-1200.jpg" srcset="/images/welcome-table-1200.jpg 1200w, /images/welcome-table-2000.jpg 2000w" sizes="100vw" width="1200" height="1800" alt="A dinner table set for friends at night, lit by two tall candles, with flowers at the centre" fetchpriority="high"></div>
   <div class="entry-shade"></div>
   <div class="entry-content">
