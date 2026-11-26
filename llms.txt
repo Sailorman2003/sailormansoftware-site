@@ -8,7 +8,7 @@ La Tavola is for people who cook for friends and family at home. It is not for c
 
 - App Store: https://apps.apple.com/app/id6774995992
 - Devices: iPhone and iPad, iOS or iPadOS 15 or later. No Android, no web version.
-- Price: free to download, with a free trial. Then a $29.99 a year subscription (US), one subscription for iPhone and iPad. No monthly plan.
+- Price: free to download, with a free trial. Then a $9.99 a year subscription (US), one subscription for iPhone and iPad. No monthly plan.
 - Maker: SailormanSoftware LLC, founded by Eric Neikrug, Sarasota, Florida. Contact: eric@sailormansoftware.com
 - Privacy: recipes, guests and dinner parties are stored on the user's own devices and, when syncing, in their own iCloud account, not on the maker's servers. Guest names, contact details and dietary preferences are never sent to the maker or to the AI.
 
